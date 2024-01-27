@@ -3,7 +3,8 @@ body {
   background-image: url('303383.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
-  background-size: cover; 
+  background-size: cover;
+  display: block;  
 }
 /* For width 400px and larger: */
 @media only screen and (max-width: 600px) {
@@ -12,16 +13,9 @@ body {
 	  background-repeat: no-repeat;
 	  background-attachment: fixed;  
 	  background-size: cover;
+	  display: block;
   }
 }
-.a{
-	margin-top:100px;
-	padding-top:10px;
-	
-}
-
-
-
 .sidebar {
   height: 100%;
   width: 0;
@@ -29,33 +23,32 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background: linear-gradient(to bottom, #ff6699 0%, #cc33ff 100%);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
-
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  background: linear-gradient(to bottom, #ffcc66 0%, #ff99cc 100%);
   display: block;
   transition: 0.3s;
 }
-
 .sidebar a:hover {
   color: #f1f1f1;
 }
-
 .sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 5px;
 }
-
 .openbtn {
   font-size: 20px;
   cursor: pointer;
@@ -64,18 +57,61 @@ body {
   padding: 10px 15px;
   border: none;
 }
-
 .openbtn:hover {
-  background-color: #444;
+    background: linear-gradient(to bottom, #ffcc66 0%, #ff99cc 100%);
 }
-
 #main {
   transition: margin-left .5s;
   padding: 0px;
 }
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 55px;
+  text-decoration: none;
+  
+}
+li a:hover {
+  text-shadow:7px 2px 2px red;
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  border: 0px solid black;
+  border-radius: 50px;
+}
+div{
+	padding:0px;
+	margin:0px;
+}
+.c {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: width 2s, height 2s, transform 2s;
+}
+.c:hover {
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    color:green;
+  transform: rotate(360deg);
 }
